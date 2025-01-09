@@ -25,3 +25,130 @@
 #container a {
   text-decoration: none;
 }
+
+/* Estilos para el formulario */
+form {
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  background: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ion-item {
+  --padding-start: 0;
+  --background: transparent;
+  margin-bottom: 20px;
+  --border-color: transparent;
+  --min-height: auto;
+  --inner-padding-end: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+ion-item::part(native) {
+  padding: 0;
+  min-height: auto;
+}
+
+ion-label {
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #808080;
+  margin-bottom: 10px !important;
+  position: static !important;
+  z-index: 2;
+  transform: none !important;
+  display: block;
+  --color: #808080;
+}
+
+ion-input {
+  --padding-start: 12px;
+  --background: #2d2d2d;
+  --border-radius: 8px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --color: #ffffff;
+  --placeholder-color: #666666;
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+ion-input.input-has-focus {
+  --background: #2d2d2d;
+}
+
+ion-button[type="submit"] {
+  margin-top: 20px;
+  --background: #4c8dff;
+  --background-hover: #366ac1;
+  --border-radius: 8px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Estilos para las cards */
+ion-grid {
+  padding: 20px;
+}
+
+ion-card {
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+ion-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+ion-card-title {
+  padding: 16px;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #333333;
+  background: #f8f9fa;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+
+ion-card ion-button {
+  margin: 8px;
+  --border-radius: 6px;
+}
+
+ion-card ion-button:first-of-type {
+  --background: #ff4961;
+  --background-hover: #e0304d;
+}
+
+ion-card ion-button:last-of-type {
+  --background: #2dd36f;
+  --background-hover: #20af5b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  form {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  ion-card {
+    margin: 8px 4px;
+  }
+  
+  ion-card-title {
+    font-size: 1.1em;
+    padding: 12px;
+  }
+}
